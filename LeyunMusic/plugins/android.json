@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-swipe-smooth": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    }
+  }
+}

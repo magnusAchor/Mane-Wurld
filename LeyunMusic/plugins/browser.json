@@ -1,0 +1,41 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-swipe-smooth": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "admob-plus-cordova": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-admob-sdk": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    }
+  }
+}

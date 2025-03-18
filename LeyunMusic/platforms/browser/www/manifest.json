@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Mane Wurld",
+  "short_name": "Mane Wurld",
+  "version": "com.leyun.daddicool",
+  "description": "A music app from lèyùn daddi cool",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": " "
+}

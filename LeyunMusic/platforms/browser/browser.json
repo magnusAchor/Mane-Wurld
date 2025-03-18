@@ -1,0 +1,141 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Camera\"><param name=\"browser-package\" value=\"Camera\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AdMob\"><param name=\"browser-package\" value=\"AdMob\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-swipe-smooth": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-admob-sdk": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    },
+    "admob-plus-cordova": {
+      "PACKAGE_NAME": "com.leyun.daddicool"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+      "id": "cordova-plugin-camera.Camera",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "Camera"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+      "id": "cordova-plugin-camera.CameraPopoverOptions",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverOptions"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/www/Camera.js",
+      "id": "cordova-plugin-camera.camera",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "navigator.camera"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/src/browser/CameraProxy.js",
+      "id": "cordova-plugin-camera.CameraProxy",
+      "pluginId": "cordova-plugin-camera",
+      "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-swipe-smooth/www/smooth.js",
+      "id": "cordova-plugin-swipe-smooth.Swipe",
+      "pluginId": "cordova-plugin-swipe-smooth",
+      "clobbers": [
+        "cordova.plugin.swipe.smooth"
+      ]
+    },
+    {
+      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
+      "id": "cordova-promise-polyfill.Promise",
+      "pluginId": "cordova-promise-polyfill",
+      "runs": true
+    },
+    {
+      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
+      "id": "cordova-promise-polyfill.promise.min",
+      "pluginId": "cordova-promise-polyfill"
+    },
+    {
+      "file": "plugins/cordova-plugin-admob-free/www/admob.js",
+      "id": "cordova-plugin-admob-free.AdMob",
+      "pluginId": "cordova-plugin-admob-free",
+      "clobbers": [
+        "admob",
+        "AdMob",
+        "plugins.AdMob"
+      ]
+    },
+    {
+      "file": "plugins/admob-plus-cordova/www/admob.js",
+      "id": "admob-plus-cordova.AdMob",
+      "pluginId": "admob-plus-cordova",
+      "clobbers": [
+        "admob"
+      ]
+    },
+    {
+      "file": "plugins/admob-plus-cordova/src/browser/AdMobProxy.js",
+      "id": "admob-plus-cordova.AdMobProxy",
+      "pluginId": "admob-plus-cordova",
+      "runs": true
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-camera": "8.0.0",
+    "cordova-plugin-geolocation": "5.0.0",
+    "cordova-plugin-swipe-smooth": "1.0.1",
+    "cordova-promise-polyfill": "0.0.2",
+    "cordova-admob-sdk": "0.24.1",
+    "cordova-plugin-admob-free": "0.27.0",
+    "cordova-plugin-androidx": "3.0.0",
+    "cordova-plugin-androidx-adapter": "1.1.3",
+    "admob-plus-cordova": "2.0.0-alpha.19"
+  }
+}

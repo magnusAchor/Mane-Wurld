@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="cordova.js"></script>
+    <title>Hello World</title>
+</head>
+
+<body>
+    <header style="position: fixed;top: 0;">
+        is header
+    </header>
+    <div class="app">
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+        <button id="disable">disable</button>
+        <br>
+        <button id="enable">enable</button>
+        <br>
+        <button id="enableToast">enable Toast</button>
+        <br>
+        <button id="textToast" value=>text Toast</button>
+        <br>
+        <button id="backgroundColor">background color</button>
+        <br>
+        <button id="jsAction">action</button>
+        <br>
+        <button id="colors">loading colors</button>
+        <br>
+        <button id="distance">distance</button>
+    </div>
+    <footer style="position: fixed;bottom: 0;">
+        is footer
+    </footer>
+    <script>
+    function log(){
+        console.log("test")
+    }
+    document.addEventListener('deviceready', async function onDeviceReady() {
+        try {
+            const smooth = cordova.plugin.swipe.smooth
+            const swipe = await smooth.initialize({})
+            if (swipe) {
+                document.querySelector("#enable").addEventListener("click", function() {
+                    smooth.enableSwipe(true)
+                })
+                document.querySelector("#disable").addEventListener("click", function() {
+                    smooth.enableSwipe(false)
+                })
+                document.querySelector("#enableToast").addEventListener("click", function() {
+                    smooth.enableToast(true)
+                })
+                document.querySelector("#textToast").addEventListener("click", function() {
+                    smooth.enableToast("test change text toast")
+                })
+                document.querySelector("#jsAction").addEventListener("click", function() {
+                    smooth.setJsAction("log()")
+                })
+                document.querySelector("#backgroundColor").addEventListener("click", function() {
+                    smooth.setBackgroundColor("#000000")
+                })
+                document.querySelector("#colors").addEventListener("click", function() {
+                    smooth.setColorsAnimation(['#FFFFFF'])
+                })
+                document.querySelector("#distance").addEventListener("click", function() {
+                    smooth.setDistance(100)
+                })
+            }
+
+            if(!sessionStorage.bannerShow){
+                const banner = new admob.BannerAd({
+                    adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+                    position: 'top',
+                    size: "SMART_BANNER",
+                });
+                sessionStorage.bannerShow = banner.id !== null
+
+                return banner.show();
+            }
+
+        } catch (e) {
+            console.log(e);
+        }
+
+    }, false);
+    </script>
+</body>
+
+</html>

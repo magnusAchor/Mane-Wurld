@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-swipe-smooth" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <engines>
+        <engine name="cordova" version=">=8.0.0"/>
+    </engines>
+
+
+    <name>swipe reload</name>
+    <description>Plugin for swipe reload cordova page</description>
+    <license>MIT</license>
+    <keywords>cordova,swipe,xml,loading</keywords>
+    <author>Buyung setiawan purnomo</author>
+
+    <js-module src="www/smooth.js" name="Swipe">
+        <clobbers target="cordova.plugin.swipe.smooth" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <framework src="androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Swipe">
+                <param name="android-package" value="smooth.plugins.cordova.swipe.Swipe" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/smooth/Swipe.java" target-dir="src/smooth/plugins/cordova/swipe"/>
+    </platform>
+</plugin>
