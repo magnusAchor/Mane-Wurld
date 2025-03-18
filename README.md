@@ -23,7 +23,7 @@ Diverse Music Library – From nursery rhymes to hardcore rap, explore all genre
 
 Technologies Used
 
-Mane Wurld is built using Apache Cordova, allowing for cross-platform development. The main technologies include:
+
 
 HTML – Structure of the app
 
@@ -31,7 +31,6 @@ CSS – Styling and layout
 
 JavaScript – Functionality and interactivity
 
-Cordova Plugins – For accessing native device features
 
 JSON – For storing and managing app data
 
@@ -47,21 +46,7 @@ Navigate to the project folder:
 
 cd mane-wurld
 
-Install Cordova dependencies:
-
-npm install -g cordova
-
-Add the platform you want to build for (Android/iOS):
-
-cordova platform add android
-
-Build the project:
-
-cordova build android
-
 Deploy the app to an emulator or connected device:
-
-cordova run android
 
 Deployment
 
